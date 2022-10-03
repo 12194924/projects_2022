@@ -64,6 +64,29 @@ Use G|B|V|C|D|E|R|T keys to rotate to absolute orientations. 'F' to cancel a rot
 
 
 ![Screenshot_2](https://user-images.githubusercontent.com/114398078/192256427-9b907444-8b7d-4380-b4d6-20f3dd90be4c.png)
+
+sudo apt update
+[sudo] password for ros2: 
+Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]                      
+Hit:2 http://kr.archive.ubuntu.com/ubuntu jammy InRelease                                      
+Ign:3 http://packages.ros.org/ros/ubuntu jammy InRelease                                       
+Hit:4 http://packages.ros.org/ros2/ubuntu jammy InRelease                      
+Get:5 http://kr.archive.ubuntu.com/ubuntu jammy-updates InRelease [114 kB]     
+Err:6 http://packages.ros.org/ros/ubuntu jammy Release                                    
+  404  Not Found [IP: 64.50.236.52 80]
+Get:7 http://kr.archive.ubuntu.com/ubuntu jammy-backports InRelease [99.8 kB]             
+Reading package lists... Done       
+E: The repository 'http://packages.ros.org/ros/ubuntu jammy Release' does not have a Release file.
+N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: See apt-secure(8) manpage for repository creation and user configuration details.
+ros2@ubuntu:~$ sudo apt install ~nros-rolling-rqt*
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+You might want to run 'apt --fix-broken install' to correct these.
+ros2@ubuntu:~$ rqt
+
+
 ![Screenshot_3](https://user-images.githubusercontent.com/114398078/192256430-55ce7fd2-1025-4d83-86c5-9da5ac4535ec.png)
 ![Screenshot_4](https://user-images.githubusercontent.com/114398078/192256433-b7effc8a-db0a-4e47-b24d-38e1e524a57e.png)
 [turtle_action.webm](https://user-images.githubusercontent.com/114398078/192256181-ae64c811-02c6-41bd-bcd4-da38c9c3b19b.webm)
