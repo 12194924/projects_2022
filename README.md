@@ -1,3 +1,144 @@
+---Writing a simple publisher and subscriber using python with ros2 (humble)---
+
+os2 pkg create --build-type ament_python py_pubsub
+going to create a new package
+package name: py_pubsub
+destination directory: /home/ubuntu
+package format: 3
+version: 0.0.0
+description: TODO: Package description
+maintainer: ['ubuntu <ubuntu@todo.todo>']
+licenses: ['TODO: License declaration']
+build type: ament_python
+dependencies: []
+creating folder ./py_pubsub
+creating ./py_pubsub/package.xml
+creating source folder
+creating folder ./py_pubsub/py_pubsub
+creating ./py_pubsub/setup.py
+creating ./py_pubsub/setup.cfg
+creating folder ./py_pubsub/resource
+creating ./py_pubsub/resource/py_pubsub
+creating ./py_pubsub/py_pubsub/__init__.py
+creating folder ./py_pubsub/test
+creating ./py_pubsub/test/test_copyright.py
+creating ./py_pubsub/test/test_flake8.py
+creating ./py_pubsub/test/test_pep257.py
+
+[WARNING]: Unknown license 'TODO: License declaration'.  This has been set in the package.xml, but no LICENSE file has been created.
+It is recommended to use one of the ament license identitifers:
+Apache-2.0
+BSL-1.0
+BSD-2.0
+BSD-2-Clause
+BSD-3-Clause
+GPL-3.0-only
+LGPL-3.0-only
+MIT
+MIT-0
+ubuntu@ubuntu-ros2:~$ wget https://raw.githubusercontent.com/ros2/examples/humble/rclpy/topics/minimal_publisher/examples_rclpy_minimal_publisher/publisher_member_function.py
+--2022-10-05 22:07:03--  https://raw.githubusercontent.com/ros2/examples/humble/rclpy/topics/minimal_publisher/examples_rclpy_minimal_publisher/publisher_member_function.py
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.111.133, 185.199.110.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1576 (1.5K) [text/plain]
+Saving to: ‘publisher_member_function.py’
+
+publisher_member_fu 100%[==================>]   1.54K  --.-KB/s    in 0s      
+
+2022-10-05 22:07:03 (5.40 MB/s) - ‘publisher_member_function.py’ saved [1576/1576]
+
+
+---And we add dependencies into package.sxml and setup.py files that have been created in ros2_ws directory---
+
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>py_pubsub</name>
+  <version>0.0.0</version>
+  <description>TODO: Package description</description>
+  <maintainer email="12194924@gmail.com">ubuntu</maintainer>
+  <license>Apache License 2.0</license>
+  
+  
+  <exec_depend>rclpy</exec_depend>
+<exec_depend>std_msgs</exec_depend>
+
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
+
+--------------------------------------------------
+
+from setuptools import setup
+
+package_name = 'py_pubsub'
+
+setup(
+    name=package_name,
+    version='0.0.0',
+    packages=[package_name],
+    data_files=[
+        ('share/ament_index/resource_index/packages',
+            ['resource/' + package_name]),
+        ('share/' + package_name, ['package.xml']),
+    ],
+    install_requires=['setuptools'],
+    zip_safe=True,
+    maintainer='ubuntu',
+    maintainer_email='12194924@gmail.com',
+    description='Examples of minimal publisher/subscriber using rclpy',
+    license='Apache License 2.0',
+    tests_require=['pytest'],
+    entry_points={
+        'console_scripts': [ 
+                'talker = py_pubsub.publisher_member_function:main',
+                'listener = py_pubsub.subscriber_member_function:main',
+        ],
+    },
+)
+
+--- We check dependies with the following command:
+rosdep install -i --from-path src --rosdistro humble -y
+colcon build --packages-select py_pubsub
+. install/setup.bash
+---Try to run the talker:---
+
+ros2 run py_pubsub talker
+
+[INFO] [minimal_publisher]: Publishing: "Hello World: 0"
+[INFO] [minimal_publisher]: Publishing: "Hello World: 1"
+[INFO] [minimal_publisher]: Publishing: "Hello World: 2"
+[INFO] [minimal_publisher]: Publishing: "Hello World: 3"
+[INFO] [minimal_publisher]: Publishing: "Hello World: 4"
+[INFO] [minimal_publisher]: Publishing: "Hello World: 5"
+[INFO] [minimal_publisher]: Publishing: "Hello World: 6"
+[INFO] [minimal_publisher]: Publishing: "Hello World: 7"
+[INFO] [minimal_publisher]: Publishing: "Hello World: 8"
+[INFO] [minimal_publisher]: Publishing: "Hello World: 9"
+
+---Try to run the listener:---
+
+[INFO] [minimal_subscriber]: I heard: "Hello World: 0"
+[INFO] [minimal_subscriber]: I heard: "Hello World: 1"
+[INFO] [minimal_subscriber]: I heard: "Hello World: 2"
+[INFO] [minimal_subscriber]: I heard: "Hello World: 3"
+[INFO] [minimal_subscriber]: I heard: "Hello World: 4"
+[INFO] [minimal_subscriber]: I heard: "Hello World: 6"
+[INFO] [minimal_subscriber]: I heard: "Hello World: 7"
+[INFO] [minimal_subscriber]: I heard: "Hello World: 8"
+[INFO] [minimal_subscriber]: I heard: "Hello World: 9"
+
+
+------------------------------------------------------------------------------------------------------------
+
 ros2@ubuntu:~$ sudo apt update
 E: Unmet dependencies. Try 'apt --fix-broken install' with no packages (or specify a solution).
 ros2@ubuntu:~$ sudo apt --fix-broken install
