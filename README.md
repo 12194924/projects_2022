@@ -1,6 +1,6 @@
 ---Writing a simple publisher and subscriber using python with ros2 (humble)---
 
-os2 pkg create --build-type ament_python py_pubsub
+ros2 pkg create --build-type ament_python py_pubsub
 going to create a new package
 package name: py_pubsub
 destination directory: /home/ubuntu
