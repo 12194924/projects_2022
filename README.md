@@ -90,7 +90,37 @@ ros2@ros2ubuntu:~$ ros2 run turtlesim turtlesim_node Warning: Ignoring XDG_SESSI
 
 ros2@ros2ubuntu:~$ ros2 run turtlesim turtle_teleop_key Reading from keyboard
 Use arrow keys to move the turtle. Use G|B|V|C|D|E|R|T keys to rotate to absolute orientations. 'F' to cancel a rotation. 'Q' to quit.
+
+
 https://user-images.githubusercontent.com/115865095/196013170-d9d46737-28ed-4296-b1a0-06b655e7a51f.webm
+
+![image](https://user-images.githubusercontent.com/114398078/201555735-30ecbbf7-da03-42e4-8ae0-8e24e18812a2.png)
+
+
+
+I do some update and try to run RQT using rqt command :
+ros2@ros2ubuntu:$ sudo apt update [sudo] password for ubuntu: Hit:1 http://packages.ros.org/ros2/ubuntu jammy InRelease Hit:2 http://security.ubuntu.com/ubuntu jammy-security InRelease Hit:3 http://kr.archive.ubuntu.com/ubuntu jammy InRelease Hit:4 http://kr.archive.ubuntu.com/ubuntu jammy-updates InRelease Hit:5 http://kr.archive.ubuntu.com/ubuntu jammy-backports InRelease Reading package lists... Done Building dependency tree... Done Reading state information... Done 56 packages can be upgraded. Run 'apt list --upgradable' to see them. ros2@ros2ubuntu:$ ros2@ros2ubuntu:~$ sudo apt install nros-humble-rqt* Reading package lists... Done Building dependency tree... Done Reading state information... Done ros-humble-rqt-bag is already the newest version (1.1.3-2jammy.20220909.040110). ros2@ros2ubuntu:$ rqt
+
+
+![image](https://user-images.githubusercontent.com/114398078/201555776-4b564ea3-c83e-4379-961c-8125c129136c.png)
+
+As you can see I did some expression I mean I added new coordinates for the turtle to spawn at, x float 1.0, and y float 1.0 like that :
+
+![image](https://user-images.githubusercontent.com/114398078/201555830-dae19e17-116a-4871-890a-f14794792fc3.png)
+
+Week_5
+
+Creating a simple publisher and subscriber (python)
+
+Step_1 : Create a package
+
+ros2 pkg create --build-type ament_python py_pubsub
+
+
+![image](https://user-images.githubusercontent.com/114398078/201555868-4a0ccd20-93b2-43c1-a877-f3e5c80c46dd.png)
+
+
+
 
 
 
