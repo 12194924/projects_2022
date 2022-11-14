@@ -66,4 +66,35 @@ ros2@ros2ubuntu:$ source /opt/ros/humble/setup.bash ros2@ros2ubuntu:$
 ![image](https://user-images.githubusercontent.com/114398078/197670316-c0f64a77-92a1-4a1a-9c78-ed92c01df9ef.png)
 
 
+ros2@ros2ubuntu:$ source /opt/ros/humble/setup.bash ros2@ros2ubuntu:$ ros2 run demo_nodes_py listener
+
+![image](https://user-images.githubusercontent.com/114398078/201555569-331e446a-a75a-49e2-bcac-b478340e0d21.png)
+
+
+
+Week_4 Turtlesim Installtion
+
+First I try to install turtlesim packages and update them :
+ros2@ros2ubuntu:$ sudo apt update Hit:1 http://packages.ros.org/ros2/ubuntu jammy InRelease
+Hit:2 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:3 http://kr.archive.ubuntu.com/ubuntu jammy InRelease Hit:4 http://kr.archive.ubuntu.com/ubuntu jammy-updates InRelease Hit:5 http://kr.archive.ubuntu.com/ubuntu jammy-backports InRelease Reading package lists... Done Building dependency tree... Done Reading state information... Done 3 packages can be upgraded. Run 'apt list --upgradable' to see them. ros2@ros2ubuntu:$ sudo apt install ros-humble-turtlesim Reading package lists... Done Building dependency tree... Done Reading state information... Done ros-humble-turtlesim is already the newest version (1.4.2-1jammy.20220908.233909). ros2@ros2ubuntu:~$ sudo apt install ros-humble-turtlesim Reading package lists... Done Building dependency tree... Done Reading state information... Done ros-humble-turtlesim is already the newest version (1.4.2-1jammy.20220908.233909). ros-humble-turtlesim set to manually installed.
+
+And I check whether the turtlesim packages is enabled or not :
+ros2@ros2ubuntu:$ ros2 pkg executables turtlesim turtlesim draw_square turtlesim mimic turtlesim turtle_teleop_key turtlesim turtlesim_node ros2@ros2ubuntu:$
+
+After successfull done I try to run and see the turtle appears on the screen :
+ros2@ros2ubuntu:~$ ros2 run turtlesim turtlesim_node Warning: Ignoring XDG_SESSION_TYPE=wayland on Gnome. Use QT_QPA_PLATFORM=wayland to run on Wayland anyway. [INFO] [1665882085.889021444] [turtlesim]: Starting turtlesim with node name /turtlesim [INFO] [1665882085.910151013] [turtlesim]: Spawning turtle [turtle1] at x=[5.544445], y=[5.544445], theta=[0.000000]
+
+![image](https://user-images.githubusercontent.com/114398078/201555606-1fce8dd9-36a6-4632-b19d-e0ecefaa9e91.png)
+
+
+ros2@ros2ubuntu:~$ ros2 run turtlesim turtle_teleop_key Reading from keyboard
+Use arrow keys to move the turtle. Use G|B|V|C|D|E|R|T keys to rotate to absolute orientations. 'F' to cancel a rotation. 'Q' to quit.
+https://user-images.githubusercontent.com/115865095/196013170-d9d46737-28ed-4296-b1a0-06b655e7a51f.webm
+
+
+
+
+
+
 
