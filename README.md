@@ -124,6 +124,47 @@ ros2 pkg create --build-type ament_python py_pubsub
 
 
 
+Week_9
+
+
+PC Setup
+
+Install Ros on remote PC
+
+
+# Open the terminal with Ctrl+Alt+T and enter below commands one at a time.
+
+
+wget https://raw.githubusercontent.com/ROBOTIS-GIT/robotis_tools/master/install_ros2_foxy.sh
+
+![Screenshot (34)](https://user-images.githubusercontent.com/114398078/201788754-086bf91f-bcda-4699-a0d2-16f40f74d5f5.png)
+
+
+sudo chmod 755 ./install_ros2_foxy.sh
+
+![Screenshot (35)](https://user-images.githubusercontent.com/114398078/201788931-59747988-2188-407d-a4b0-0bc130e10db7.png)
+
+
+bash ./install_ros2_foxy.sh
+
+![Screenshot (37)](https://user-images.githubusercontent.com/114398078/201789058-11ab29cb-996a-4ba6-8113-1946cf115f2c.png)
+
+
+Install Dependent ROS 2 Packages
+
+
+# Open the terminal with Ctrl+Alt+T from Remote PC.
+Install Gazebo11
+
+![image](https://user-images.githubusercontent.com/114398078/201791226-e995aa3f-d7b3-4c35-9398-e60a703386a8.png)
+
+
+#  Install Cartographer
+
+sudo apt install ros-foxy-cartographer
+
+![image](https://user-images.githubusercontent.com/114398078/201791719-3e9b19dc-eeeb-4d46-a70b-6f4417a6c94d.png)
+![image](https://user-images.githubusercontent.com/114398078/201791756-32ac0cec-6107-4f23-a7fd-01bc8077ac3a.png)
 
 
 
