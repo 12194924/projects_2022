@@ -165,6 +165,65 @@ sudo apt install ros-foxy-cartographer
 
 ![image](https://user-images.githubusercontent.com/114398078/201791719-3e9b19dc-eeeb-4d46-a70b-6f4417a6c94d.png)
 ![image](https://user-images.githubusercontent.com/114398078/201791756-32ac0cec-6107-4f23-a7fd-01bc8077ac3a.png)
+![Screenshot (41)](https://user-images.githubusercontent.com/114398078/201792401-0faf7e26-126d-4480-8032-eec4a4d37143.png)
+![Screenshot (42)](https://user-images.githubusercontent.com/114398078/201792493-2586abf0-7cd3-40cc-b4c7-2f02c9403571.png)
+
+
+# Install Navigation2
+
+
+sudo apt install ros-foxy-navigation2
+
+![Screenshot (43)](https://user-images.githubusercontent.com/114398078/201792761-a7f8fc6a-4078-4499-94c3-3dc75213d2cf.png)
+![Screenshot (44)](https://user-images.githubusercontent.com/114398078/201792893-0f78cfc5-d742-4a3d-9772-806724b7ec77.png)
+
+sudo apt install ros-foxy-nav2-bringup
+
+![Screenshot (45)](https://user-images.githubusercontent.com/114398078/201793155-ca77c475-7435-44f1-8fe8-e347f71ebf9d.png)
+![Screenshot (46)](https://user-images.githubusercontent.com/114398078/201793261-0daff8b9-0a83-4d4c-bafc-498139833957.png)
+
+
+
+
+Install TurtleBot3 Packages
+
+
+
+# Install TurtleBot3 via Debian Packages.
+
+source ~/.bashrc
+sudo apt install ros-foxy-dynamixel-sdk
+
+![Screenshot (47)](https://user-images.githubusercontent.com/114398078/201793611-2d355971-6807-4d2b-81ec-b55d4f992916.png)
+
+sudo apt install ros-foxy-turtlebot3-msgs
+
+![Screenshot (48)](https://user-images.githubusercontent.com/114398078/201793760-5850082e-ea4f-40f7-9906-62885fc36b97.png)
+
+sudo apt install ros-foxy-turtlebot3
+
+![Screenshot (49)](https://user-images.githubusercontent.com/114398078/201793885-0271e80b-5b90-4c3a-936b-89a1f11b97c1.png)
+![Screenshot (50)](https://user-images.githubusercontent.com/114398078/201793982-12336089-b48b-463f-a4f8-13745fd75ed1.png)
+
+
+Environment Configuration
+
+
+# Set the ROS environment for PC
+
+echo 'export ROS_DOMAIN_ID=30 #TURTLEBOT3' >> ~/.bashrc
+source ~/.bashrc
+
+
+![Screenshot (51)](https://user-images.githubusercontent.com/114398078/201794607-793e0b0e-aa19-4288-a1df-a992c3363784.png)
+
+
+### PC Setup finished.
+
+
+
+SBC Setup
+
 
 
 
