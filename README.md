@@ -120,6 +120,16 @@ ros2 pkg create --build-type ament_python py_pubsub
 ![image](https://user-images.githubusercontent.com/114398078/201555868-4a0ccd20-93b2-43c1-a877-f3e5c80c46dd.png)
 
 
+Step_2 : Writing the publisher node
+
+Navigate into ros2_ws/src/py_pubsub/py_pubsub
+![image](https://user-images.githubusercontent.com/114398078/202094631-616d2b32-c3b5-4138-bd82-b549032e0de1.png)
+
+Download the code using this command :
+
+wget https://raw.githubusercontent.com/ros2/examples/humble/rclpy/topics/minimal_publisher/examples_rclpy_minimal_publisher/publisher_member_function.py
+
+Now there will be a new file named publisher_member_function.py adjacent to init.py. In order to see them we type ls and we can see publisher_member_function.py and init.py files on terminal. In order to open the files just type open before the name of the files :
 
 
 
